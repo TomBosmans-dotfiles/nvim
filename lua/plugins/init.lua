@@ -37,5 +37,15 @@ return require('packer').startup({
         require('plugins/treesitter')
       end
     }
+    -- lualine
+    use {
+      'hoob3rt/lualine.nvim',
+      requires = {
+        { 'kyazdani42/nvim-web-devicons' }
+      },
+      config = function()
+        require('plugins/lualine')
+      end
+    }
   end
 })
