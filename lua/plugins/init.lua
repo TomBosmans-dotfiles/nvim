@@ -47,5 +47,12 @@ return require('packer').startup({
         require('plugins/lualine')
       end
     }
+    -- LSP
+    use {
+      "neovim/nvim-lspconfig",
+      config = function()
+        require("plugins/lsp")
+      end
+    }
   end
 })
