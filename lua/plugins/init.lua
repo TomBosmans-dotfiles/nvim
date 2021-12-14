@@ -26,13 +26,16 @@ return require('packer').startup({
         require('plugins/telescope')
       end
     }
-  end,
-
-  config = {
-    display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
+    -- Treesitter
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate',
+      requires = {
+        { 'nvim-treesitter/playground' }
+      },
+      config = function()
+        require('plugins/treesitter')
       end
     }
-  }
+  end
 })
