@@ -54,5 +54,15 @@ return require('packer').startup({
         require("plugins/lsp")
       end
     }
+    -- git diffs
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        { 'nvim-lua/plenary.nvim' }
+      },
+      config = function()
+        require('plugins/gitsigns')
+      end
+    }
   end
 })
