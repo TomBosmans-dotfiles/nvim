@@ -14,6 +14,8 @@ return require('packer').startup({
         require('plugins/nord')
       end
     }
+    -- Edit surround
+    use { 'machakann/vim-sandwich' }
     -- Finder
     use {
       'nvim-telescope/telescope.nvim',
