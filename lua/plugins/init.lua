@@ -64,5 +64,15 @@ return require('packer').startup({
         require('plugins/gitsigns')
       end
     }
+    -- tree
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        { 'kyazdani42/nvim-web-devicons' }
+      },
+      config = function()
+        require('plugins/tree')
+      end
+    }
   end
 })
