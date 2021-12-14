@@ -4,6 +4,8 @@ return require('packer').startup({
   function(use)
     -- Packer can manage itself
     use { 'wbthomason/packer.nvim', config = require_config('packer') }
+    -- Theme
+    use { 'arcticicestudio/nord-vim', config = require_config('nord') }
   end,
 
   config = {
