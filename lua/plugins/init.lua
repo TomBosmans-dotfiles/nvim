@@ -23,6 +23,13 @@ return require('packer').startup({
         require('plugins/bbye')
       end
     }
+    -- Autopair
+    use {
+      'windwp/nvim-autopairs',
+      config = function()
+        require('plugins/autopairs')
+      end
+    }
     -- Finder
     use {
       'nvim-telescope/telescope.nvim',
