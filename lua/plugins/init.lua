@@ -77,7 +77,8 @@ return require('packer').startup({
     use {
       'williamboman/nvim-lsp-installer',
       requires = {
-        { 'neovim/nvim-lspconfig' }
+        { 'neovim/nvim-lspconfig' },
+        { 'filipdutescu/renamer.nvim' }
       },
       config = function()
         require("plugins/lsp")
