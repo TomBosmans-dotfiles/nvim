@@ -1,2 +1,17 @@
-require("plugins/lsp/tsserver")
-require("plugins/lsp/sumneko_lua")
+local utils = require('utils')
+local lsp_installer = require('nvim-lsp-installer')
+
+lsp_installer.on_server_ready(function(server)
+  local opts = { on_attach = utils.on_attach }
+  server:setup(opts)
+end)
+
+lsp_installer.settings({
+  ui = {
+    icons = {
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
+    }
+  }
+})

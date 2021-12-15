@@ -1,6 +1,6 @@
-local utils = {}
+local U = {}
 
-function utils.on_attach()
+function U.on_attach()
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -30,4 +30,4 @@ function utils.on_attach()
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-return utils
+return U
