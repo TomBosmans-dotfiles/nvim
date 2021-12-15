@@ -112,6 +112,7 @@ return require('packer').startup({
         { 'hrsh7th/cmp-buffer' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'kristijanhusak/vim-dadbod-completion' },
+        { 'onsails/lspkind-nvim' },
         {
           'L3MON4D3/LuaSnip',
           requires = {

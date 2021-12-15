@@ -1,6 +1,13 @@
 local cmp = require'cmp'
+local lspkind = require('lspkind')
 
 cmp.setup({
+  formatting = {
+    format = lspkind.cmp_format({
+      with_text = false, -- do not show text alongside icons
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+    })
+  },
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
