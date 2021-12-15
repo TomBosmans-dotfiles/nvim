@@ -16,6 +16,13 @@ return require('packer').startup({
     }
     -- Edit surround
     use { 'machakann/vim-sandwich' }
+    -- Better way to close buffers
+    use {
+      'moll/vim-bbye',
+      config = function()
+        require('plugins/bbye')
+      end
+    }
     -- Finder
     use {
       'nvim-telescope/telescope.nvim',
