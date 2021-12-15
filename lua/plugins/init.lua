@@ -104,6 +104,12 @@ return require('packer').startup({
         require('plugins/neogit')
       end
     }
+    use {
+      'sindrets/diffview.nvim',
+      config = function()
+        require('plugins/diffview')
+      end
+    }
     -- tree
     use {
       'kyazdani42/nvim-tree.lua',
