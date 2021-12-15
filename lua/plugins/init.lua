@@ -14,6 +14,13 @@ return require('packer').startup({
         require('plugins/nord')
       end
     }
+    -- Which key?
+    use {
+      'folke/which-key.nvim',
+      config = function()
+        require('plugins/whichkey')
+      end
+    }
     -- Edit surround
     use { 'machakann/vim-sandwich' }
     -- Better way to close buffers
