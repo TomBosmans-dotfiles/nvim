@@ -84,7 +84,7 @@ return require('packer').startup({
         require("plugins/lsp")
       end
     }
-    -- git diffs
+    -- GIT
     use {
       'lewis6991/gitsigns.nvim',
       requires = {
@@ -92,6 +92,16 @@ return require('packer').startup({
       },
       config = function()
         require('plugins/gitsigns')
+      end
+    }
+    use {
+      'TimUntersberger/neogit',
+      requires = {
+        { 'nvim-lua/plenary.nvim' },
+        { 'sindrets/diffview.nvim' }
+      },
+      config = function()
+        require('plugins/neogit')
       end
     }
     -- tree
