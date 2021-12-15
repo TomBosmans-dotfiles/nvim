@@ -23,6 +23,16 @@ return require('packer').startup({
         require('plugins/bbye')
       end
     }
+    -- Database
+    use {
+      'kristijanhusak/vim-dadbod-ui',
+      requires = {
+        { 'tpope/vim-dadbod' }
+      },
+      config = function()
+        require('plugins/dadbod')
+      end
+    }
     -- Autopair
     use {
       'windwp/nvim-autopairs',
@@ -101,6 +111,7 @@ return require('packer').startup({
         { 'hrsh7th/cmp-path' },
         { 'hrsh7th/cmp-buffer' },
         { 'hrsh7th/cmp-nvim-lsp' },
+        { 'kristijanhusak/vim-dadbod-completion' },
         {
           'L3MON4D3/LuaSnip',
           requires = {
