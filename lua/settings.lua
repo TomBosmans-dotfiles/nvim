@@ -18,6 +18,7 @@ set.shiftwidth = 2
 
 -- show line numbers, except in terminal
 set.number = true
+set.relativenumber = true
 cmd('au TermOpen * setlocal nonumber norelativenumber')
 
 -- highlight cursorline
