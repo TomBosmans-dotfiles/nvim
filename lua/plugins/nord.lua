@@ -1,4 +1,6 @@
+local config = require('config')
 local load_theme = require('utils').load_theme
+if config.theme ~= 'nord' then return end
 
 vim.g.nord_italic = 1
 vim.g.nord_bold = 1

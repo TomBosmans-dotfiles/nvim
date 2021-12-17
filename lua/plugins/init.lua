@@ -14,6 +14,12 @@ return require('packer').startup({
         require('plugins/nord')
       end
     }
+    use {
+      'EdenEast/nightfox.nvim',
+      config = function()
+        require('plugins/nightfox')
+      end
+    }
     -- Which key?
     use {
       'folke/which-key.nvim',

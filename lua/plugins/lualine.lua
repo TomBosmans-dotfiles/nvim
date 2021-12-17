@@ -1,3 +1,5 @@
+local config = require('config')
+
 local function windowNumber()
   return vim.api.nvim_exec([[echo winnr()]], true)
 end
@@ -9,7 +11,7 @@ end
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'nord',
+    theme = config.theme,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {}
