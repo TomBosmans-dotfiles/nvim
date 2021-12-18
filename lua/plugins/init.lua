@@ -1,141 +1,138 @@
+local config = require('config')
+
 return require('packer').startup({
   function(use)
-    -- Packer can manage itself
-    use {
-      'wbthomason/packer.nvim',
-      config = function()
-        require('plugins/packer')
-      end
-    }
-    -- Theme
+    -- Packer
+    use { 'wbthomason/packer.nvim' }
+
+    -- Nord
     use {
       'arcticicestudio/nord-vim',
-      config = function()
-        require('plugins/nord')
-      end
+      disable = not config.plugins.nord_vim.enabled,
+      config = function() require('plugins/nord') end
     }
+
+    -- Nightfox
     use {
       'EdenEast/nightfox.nvim',
-      config = function()
-        require('plugins/nightfox')
-      end
+      disable = not config.plugins.nightfox.enabled,
+      config = function() require('plugins/nightfox') end
     }
-    -- Which key?
+
+    -- Which Key
     use {
       'folke/which-key.nvim',
-      config = function()
-        require('plugins/whichkey')
-      end
+      disable = not config.plugins.which_key.enabled,
+      config = function() require('plugins/whichkey') end
     }
-    -- Edit surround
-    use { 'machakann/vim-sandwich' }
-    -- Better way to close buffers
+
+    -- Sandwich
+    use {
+      'machakann/vim-sandwich',
+      disable = not config.plugins.vim_sandwich.enabled
+    }
+
+    -- Bbye
     use {
       'moll/vim-bbye',
-      config = function()
-        require('plugins/bbye')
-      end
+      disable = not config.plugins.bbye.enabled,
+      config = function() require('plugins/bbye') end
     }
-    -- Database
+
+    -- Dadbod
     use {
       'kristijanhusak/vim-dadbod-ui',
-      requires = {
-        { 'tpope/vim-dadbod' }
-      },
-      config = function()
-        require('plugins/dadbod')
-      end
+      disable = not config.plugins.dadbod.enabled,
+      config = function() require('plugins/dadbod') end,
+      requires = {{ 'tpope/vim-dadbod' }}
     }
-    -- Autopair
+
+    -- Autopairs
     use {
       'windwp/nvim-autopairs',
-      config = function()
-        require('plugins/autopairs')
-      end
+      disable = not config.plugins.nvim_autopairs.enabled,
+      config = function() require('plugins/autopairs') end
     }
-    -- Finder
+
+    -- Telescope
     use {
       'nvim-telescope/telescope.nvim',
+      disable = not config.plugins.telescope.enabled,
+      config = function() require('plugins/telescope') end,
       requires = {
         { 'nvim-lua/plenary.nvim' },
         { 'kyazdani42/nvim-web-devicons' },
         { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-      },
-      config = function()
-        require('plugins/telescope')
-      end
+      }
     }
+
     -- Treesitter
     use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
-      requires = {
-        { 'nvim-treesitter/playground' }
-      },
-      config = function()
-        require('plugins/treesitter')
-      end
+      disable = not config.plugins.nvim_treesitter.enabled,
+      config = function() require('plugins/treesitter') end,
+      requires = {{ 'nvim-treesitter/playground' }}
     }
-    -- lualine
+
+    -- Lualine
     use {
       'hoob3rt/lualine.nvim',
-      requires = {
-        { 'kyazdani42/nvim-web-devicons' }
-      },
-      config = function()
-        require('plugins/lualine')
-      end
+      disable = not config.plugins.lualine.enabled,
+      config = function() require('plugins/lualine') end,
+      requires = {{ 'kyazdani42/nvim-web-devicons' }}
     }
+
     -- LSP
     use {
       'williamboman/nvim-lsp-installer',
+      disable = not config.plugins.lsp.enabled,
+      config = function() require('plugins/lsp') end,
       requires = {
         { 'neovim/nvim-lspconfig' },
         { 'filipdutescu/renamer.nvim' }
-      },
-      config = function()
-        require("plugins/lsp")
-      end
+      }
     }
-    -- GIT
+
+    -- Gitsigns
     use {
       'lewis6991/gitsigns.nvim',
-      requires = {
-        { 'nvim-lua/plenary.nvim' }
-      },
-      config = function()
-        require('plugins/gitsigns')
-      end
+      disable = not config.plugins.gitsigns.enabled,
+      config = function() require('plugins/gitsigns') end,
+      requires = {{ 'nvim-lua/plenary.nvim' }}
     }
+
+    -- Neogit
     use {
       'TimUntersberger/neogit',
+      disable = not config.plugins.neogit.enabled,
+      config = function() require('plugins/neogit') end,
       requires = {
         { 'nvim-lua/plenary.nvim' },
         { 'sindrets/diffview.nvim' }
-      },
-      config = function()
-        require('plugins/neogit')
-      end
+      }
     }
+
+    -- Diffview
     use {
       'sindrets/diffview.nvim',
-      config = function()
-        require('plugins/diffview')
-      end
+      disable = not config.plugins.diffview.enabled,
+      config = function() require('plugins/diffview') end
     }
-    -- tree
+
+    -- Nvim Tree
     use {
       'kyazdani42/nvim-tree.lua',
-      requires = {
-        { 'kyazdani42/nvim-web-devicons' }
-      },
-      config = function()
-        require('plugins/tree')
-      end
+      disable = not config.plugins.nvim_tree.enabled,
+      config = function() require('plugins/tree') end,
+      requires = {{ 'kyazdani42/nvim-web-devicons' }}
     }
-    -- autocompletion
+
+    -- CMP
     use {
       'hrsh7th/nvim-cmp',
+      disable = not config.plugins.cmp.enabled,
+      config = function() require('plugins/cmp') end,
       requires = {
         { 'hrsh7th/cmp-cmdline' },
         { 'hrsh7th/cmp-path' },
@@ -143,16 +140,9 @@ return require('packer').startup({
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'kristijanhusak/vim-dadbod-completion' },
         { 'onsails/lspkind-nvim' },
-        {
-          'L3MON4D3/LuaSnip',
-          requires = {
-            { 'saadparwaiz1/cmp_luasnip' }
-          }
-        },
-      },
-      config = function()
-        require('plugins/cmp')
-      end
+        { 'L3MON4D3/LuaSnip', requires = {{ 'saadparwaiz1/cmp_luasnip' }} }
+      }
     }
-  end
+  end,
+  config = require('plugins/packer')
 })
