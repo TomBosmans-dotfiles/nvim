@@ -25,7 +25,6 @@ return require('packer').startup({
       disable = not config.plugins.auto_sessions.enabled,
       config = function() require('plugins/auto_sessions') end,
     }
-
     -- Which Key
     use {
       'folke/which-key.nvim',
@@ -71,6 +70,16 @@ return require('packer').startup({
         { 'kyazdani42/nvim-web-devicons' },
         { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         { 'rmagatti/session-lens' }
+      }
+    }
+
+    -- FZF
+    use {
+      'junegunn/fzf.vim',
+      disable = not config.plugins.fzf.enabled,
+      config = function() require('plugins/fzf') end,
+      requires = {
+        { 'junegunn/fzf', run = function() vim.fn["fzf#install"]() end }
       }
     }
 

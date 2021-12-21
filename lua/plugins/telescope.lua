@@ -1,9 +1,4 @@
 local telescope = require('telescope')
-local map = require('utils').map
-
-map('n', '<leader>ff', ':Telescope git_files <CR>')
-map('n', '<leader>fb', ':Telescope buffers <CR>')
-map('n', '<leader>fs', ':SearchSession <CR>')
 
 telescope.setup({
   defaults = {

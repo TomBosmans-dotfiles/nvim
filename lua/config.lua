@@ -11,6 +11,7 @@ return {
     dadbod = { enabled = true },
     nvim_autopairs = { enabled = true },
     telescope = { enabled = true },
+    fzf = { enabled = true },
     nvim_treesitter = { enabled = true },
     lualine = { enabled = true },
     lsp = { enabled = true },
