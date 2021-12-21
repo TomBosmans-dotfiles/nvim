@@ -113,6 +113,12 @@ return require('packer').startup({
       }
     }
 
+    -- Fugitive
+    use {
+      'tpope/vim-fugitive',
+      disable = not config.plugins.fugutive.enabled
+    }
+
     -- Diffview
     use {
       'sindrets/diffview.nvim',

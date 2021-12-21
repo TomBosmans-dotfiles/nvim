@@ -1,8 +1,4 @@
 local cb = require'diffview.config'.diffview_callback
-local map = require('utils').map
-
-map('n', '<leader>gd', ':DiffviewFileOpen <CR>')
-map('n', '<leader>gh', ':DiffviewFileHistory <CR>')
 
 require'diffview'.setup {
   diff_binaries = false,    -- Show diffs for binaries

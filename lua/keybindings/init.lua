@@ -13,3 +13,5 @@ for index = 1, 9, 1 do map('n', 't'..index, index..'gt<cr>') end
 map('n', '<leader>cfr', ':let @+ = expand("%")<cr>')
 map('n', '<leader>cff', ':let @+ = expand("%:p")<cr>')
 map('n', '<leader>cfn', ':let @+ = expand("%:t")<cr>')
+
+require('keybindings/git')

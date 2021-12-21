@@ -2,7 +2,6 @@ local map = require('utils').map
 
 map('n', '<leader>ff', ':Telescope git_files <CR>')
 map('n', '<leader>fb', ':Telescope buffers <CR>')
-map('n', '<leader>gb', ':Telescope git_branches <CR>')
 
 require('telescope').setup({
   defaults = {

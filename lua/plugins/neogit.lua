@@ -1,8 +1,3 @@
-local map = require('utils').map
-map('n', '<leader>ga', ':Neogit <CR>')
-map('n', '<leader>gd', ':DiffviewFileOpen <CR>')
-map('n', '<leader>gh', ':DiffviewFileHistory <CR>')
-
 require('neogit').setup {
   disable_signs = false,
   disable_hint = false,
