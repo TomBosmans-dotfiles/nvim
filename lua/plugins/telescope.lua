@@ -11,7 +11,22 @@ telescope.setup({
       }
     }
   },
-  pickers = {},
+  pickers = {
+    buffers = {
+      show_all_buffers = true,
+      sort_lastused = true,
+      theme = "dropdown",
+      previewer = false,
+      mappings = {
+        i = {
+          ['<c-d>'] = 'delete_buffer'
+        },
+        n = {
+          ['<c-d>'] = 'delete_buffer'
+        }
+      }
+    }
+  },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
