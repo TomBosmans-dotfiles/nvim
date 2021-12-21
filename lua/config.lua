@@ -20,5 +20,6 @@ return {
     diffview = { enabled = true },
     nvim_tree = { enabled = true },
     cmp = { enabled = true },
+    auto_sessions = { enabled = true },
   }
 }

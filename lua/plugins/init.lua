@@ -19,6 +19,13 @@ return require('packer').startup({
       config = function() require('plugins/nightfox') end
     }
 
+    -- Auto sessions
+    use {
+      'rmagatti/auto-session',
+      disable = not config.plugins.auto_sessions.enabled,
+      config = function() require('plugins/auto_sessions') end,
+    }
+
     -- Which Key
     use {
       'folke/which-key.nvim',
@@ -62,7 +69,8 @@ return require('packer').startup({
       requires = {
         { 'nvim-lua/plenary.nvim' },
         { 'kyazdani42/nvim-web-devicons' },
-        { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+        { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+        { 'rmagatti/session-lens' }
       }
     }
 
