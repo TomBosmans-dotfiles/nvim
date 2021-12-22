@@ -1,5 +1,13 @@
 local telescope = require('telescope')
 
+local lsp_theme = {
+  results_title = '',
+  preview_title = '',
+  theme = "cursor",
+  layout_config = { height = 0.3, width = 0.99 },
+  border = true,
+}
+
 telescope.setup({
   defaults = {
     mappings = {
@@ -12,6 +20,14 @@ telescope.setup({
     }
   },
   pickers = {
+    lsp_references = lsp_theme,
+    lsp_definitions = lsp_theme,
+    lsp_implementations = lsp_theme,
+    lsp_type_definitions = lsp_theme,
+    lsp_code_actions = { theme = 'cursor' },
+    lsp_document_symbols = {},
+    lsp_workspace_symbols = {},
+
     buffers = {
       show_all_buffers = true,
       sort_lastused = true,
