@@ -9,7 +9,7 @@ end
 
 if config.plugins.fugutive.enabled then
   map('n', '<leader>gp', ':Git pull <CR>')
-  map('n', '<leader>gP', ':Git push --force-with-lease <CR>')
+  map('n', '<leader>gP', ':Git push origin HEAD --force-with-lease <CR>')
   map('n', '<leader>gf', ':Git fetch <CR>')
   map('n', '<leader>gr', ':Git rebase --interactive ', { noremap = true, silent = false })
 end
