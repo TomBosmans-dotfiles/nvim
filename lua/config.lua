@@ -2,6 +2,7 @@ return {
   theme = 'nightfox', -- nord, nightfox, nordfox, dayfox, dawnfox, duskfox
   finder = 'telescope', -- fzf, telescope
   git = 'fugutive', -- neogit, fugutive
+  spotify_enabled = true,
   plugins = {
     nord_vim = { enabled = true },
     nightfox = { enabled = true },

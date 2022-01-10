@@ -97,7 +97,10 @@ return require('packer').startup({
       'hoob3rt/lualine.nvim',
       disable = not config.plugins.lualine.enabled,
       config = function() require('plugins/lualine') end,
-      requires = {{ 'kyazdani42/nvim-web-devicons' }}
+      requires = {
+        { 'kyazdani42/nvim-web-devicons' },
+        { 'KadoBOT/nvim-spotify', disable = not config.spotify_enabled },
+      }
     }
 
     -- LSP
