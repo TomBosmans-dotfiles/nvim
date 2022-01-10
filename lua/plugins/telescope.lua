@@ -27,6 +27,7 @@ telescope.setup({
     lsp_code_actions = { theme = 'cursor' },
     lsp_document_symbols = {},
     lsp_workspace_symbols = {},
+    git_branches = { theme = 'dropdown', previewer = false },
 
     buffers = {
       show_all_buffers = true,
