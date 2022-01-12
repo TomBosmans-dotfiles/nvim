@@ -1,3 +1,4 @@
+require('settings/lsp')
 require('settings/hover')
 
 local set = vim.opt
