@@ -6,8 +6,7 @@ if config.spotify_enabled then
   spotify:start()
 
   function Spotify.spotifyLogo()
-    local listen = spotify.listen()
-    if (listen) then return '  ' else return listen end
+    return '  '
   end
 
   function Spotify.currentSong()
