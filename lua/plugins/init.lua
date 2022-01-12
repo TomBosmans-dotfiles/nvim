@@ -154,6 +154,14 @@ return require('packer').startup({
       requires = {{ 'kyazdani42/nvim-web-devicons' }}
     }
 
+    -- Trouble
+    use {
+      'folke/trouble.nvim',
+      disable = not config.plugins.trouble.enabled,
+      config = function() require("plugins/trouble") end,
+      requires = {{'kyazdani42/nvim-web-devicons'}}
+    }
+
     -- CMP
     use {
       'hrsh7th/nvim-cmp',
