@@ -1,3 +1,5 @@
+require('settings/hover')
+
 local set = vim.opt
 local cmd = vim.cmd
 
