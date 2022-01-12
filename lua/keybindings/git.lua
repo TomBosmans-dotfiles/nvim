@@ -8,6 +8,7 @@ elseif config.git == 'fugutive' and config.plugins.fugutive.enabled then
 end
 
 if config.plugins.fugutive.enabled then
+  map('n', '<leader>gl', ':Git log <CR>')
   map('n', '<leader>gp', ':Git pull <CR>')
   map('n', '<leader>gP', ':Git push origin HEAD --force-with-lease <CR>')
   map('n', '<leader>gf', ':Git fetch <CR>')
