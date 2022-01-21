@@ -9,9 +9,9 @@ end
 
 if config.plugins.fugutive.enabled then
   map('n', '<leader>gl', ':Git log <CR>')
-  map('n', '<leader>gp', ':Git pull <CR>')
-  map('n', '<leader>gP', ':Git push origin HEAD --force-with-lease <CR>')
-  map('n', '<leader>gf', ':Git fetch <CR>')
+  map('n', '<leader>gp', ':lua notify_trace("Git pull") <CR>')
+  map('n', '<leader>gP', ':lua notify_trace("Git push origin HEAD --force-with-lease") <CR>')
+  map('n', '<leader>gf', ':lua notify_trace("Git fetch") <CR>')
   map('n', '<leader>gr', ':Git rebase --interactive ', { noremap = true, silent = false })
 end
 

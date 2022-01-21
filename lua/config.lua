@@ -30,5 +30,6 @@ return {
     trouble = { enabled = true },
     github_theme = { enabled = true },
     indent_blankline = { enabled = true },
+    nvim_notify = { enabled = true }
   }
 }

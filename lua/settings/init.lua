@@ -1,3 +1,4 @@
+require('settings/notify')
 require('settings/lsp')
 require('settings/hover')
 

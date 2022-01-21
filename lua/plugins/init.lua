@@ -175,6 +175,14 @@ return require('packer').startup({
       disable = not config.plugins.indent_blankline.enabled,
       config = function() require('plugins/indent_blankline') end
     }
+
+    -- Notify
+    use {
+      'rcarriga/nvim-notify',
+      disable = not config.plugins.nvim_notify.enabled,
+      config = function() require('plugins/nvim_notify') end
+    }
+
     -- CMP
     use {
       'hrsh7th/nvim-cmp',
