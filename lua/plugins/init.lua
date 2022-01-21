@@ -162,6 +162,12 @@ return require('packer').startup({
       requires = {{'kyazdani42/nvim-web-devicons'}}
     }
 
+    -- Guidelines
+    use {
+      'lukas-reineke/indent-blankline.nvim',
+      disable = not config.plugins.indent_blankline.enabled,
+      config = function() require('plugins/indent_blankline') end
+    }
     -- CMP
     use {
       'hrsh7th/nvim-cmp',

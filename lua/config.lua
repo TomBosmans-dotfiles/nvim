@@ -24,5 +24,6 @@ return {
     cmp = { enabled = true },
     auto_sessions = { enabled = true },
     trouble = { enabled = true },
+    indent_blankline = { enabled = true },
   }
 }
