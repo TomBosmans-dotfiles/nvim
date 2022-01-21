@@ -165,7 +165,7 @@ return require('packer').startup({
     use {
       'folke/trouble.nvim',
       disable = not config.plugins.trouble.enabled,
-      config = function() require("plugins/trouble") end,
+      config = function() require('plugins/trouble') end,
       requires = {{'kyazdani42/nvim-web-devicons'}}
     }
 
