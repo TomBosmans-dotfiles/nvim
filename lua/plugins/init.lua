@@ -19,6 +19,13 @@ return require('packer').startup({
       config = function() require('plugins/nightfox') end
     }
 
+    -- Github Theme
+    use {
+      "projekt0n/github-nvim-theme",
+      disable = not config.plugins.github_theme.enabled,
+      config = function() require('plugins/github_theme') end
+    }
+
     -- Auto sessions
     use {
       'rmagatti/auto-session',
