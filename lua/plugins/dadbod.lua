@@ -7,4 +7,4 @@ function _G.open_dadbod()
   vim.cmd ':tabnew'
   vim.cmd ':DBUI'
 end
-map('n', '<leader>db', ':lua open_dadbod()<cr>', options)
+map('n', '<leader>db', ':lua open_dadbod()<cr>')
