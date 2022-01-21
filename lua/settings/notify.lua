@@ -1,9 +1,4 @@
-local function command_output(cmd)
-  vim.cmd("redir => g:_command_output | silent " .. cmd .. " | redir END ")
-  local output = vim.g._command_output
-  vim.g._command_output = nil
-  return output
-end
+local command_output = require('utils').command_output
 
 local function notify(msg, title, type)
   vim.notify(msg, type, { title = title })
