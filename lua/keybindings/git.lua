@@ -22,8 +22,10 @@ end
 
 if config.plugins.gitsigns.enabled then
   map('n', '<leader>ghr', ':Gitsigns reset_hunk<CR>')
+  map('n', '<leader>ghR', ':Gitsigns reset_buffer<CR>')
   map('n', '<leader>ghb', ':lua require("gitsigns").blame_line({full=true})<CR>')
   map('n', '<leader>ghp', ':Gitsigns preview_hunk<CR>')
+  map('n', '<leader>gtl', ':Gitsigns toggle_linehl<CR>')
 end
 
 if config.plugins.telescope.enabled then
