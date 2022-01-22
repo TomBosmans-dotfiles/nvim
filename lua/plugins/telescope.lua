@@ -1,4 +1,5 @@
 local telescope = require('telescope')
+local config = require('config')
 
 local lsp_theme = {
   results_title = '',
@@ -56,5 +57,11 @@ telescope.setup({
 })
 
 telescope.load_extension('fzf')
-telescope.load_extension('session-lens')
-telescope.load_extension('notify')
+
+if config.plugins.auto_sessions.enabled then
+  telescope.load_extension('session-lens')
+end
+
+if config.plugins.nvim_notify.enabled then
+  telescope.load_extension('notify')
+end
