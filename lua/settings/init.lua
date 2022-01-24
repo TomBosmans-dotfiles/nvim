@@ -59,3 +59,7 @@ set.smartcase = true
 
 -- disable swapfiles
 set.swapfile = false
+
+-- listchars
+vim.opt.list = true
+vim.cmd [[set listchars=space:⋅,tab:>-,eol:↴,]]
