@@ -3,7 +3,7 @@ return {
   -- github_dark, github_dimmed, github_dark_default,
   -- github_dark_colorblind, github_light, github_light_default
   -- github_light_colorblind
-  theme = 'github_dark', 
+  theme = 'github_dark',
   finder = 'telescope', -- fzf, telescope
   git = 'fugutive', -- neogit, fugutive
   spotify_enabled = true,
@@ -29,7 +29,7 @@ return {
     auto_sessions = { enabled = true },
     trouble = { enabled = true },
     github_theme = { enabled = true },
-    indent_blankline = { enabled = true },
-    nvim_notify = { enabled = true }
+    indent_blankline = { enabled = false },
+    nvim_notify = { enabled = true },
   }
 }
