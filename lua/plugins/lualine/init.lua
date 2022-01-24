@@ -9,7 +9,7 @@ local diagnostics = require('plugins/lualine/diagnostics')
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'github',
+    theme = 'auto',
     component_separators = {},
     section_separators = {},
     disabled_filetypes = {}
