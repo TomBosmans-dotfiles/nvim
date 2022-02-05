@@ -1,5 +1,5 @@
 require('plugins/lualine/redraw')
-local config = require('config')
+
 local Utils = require('plugins/lualine/utils')
 local Spotify = require('plugins/lualine/spotify')
 local filename = require('plugins/lualine/filename')

@@ -21,9 +21,16 @@ return require('packer').startup({
 
     -- Github Theme
     use {
-      "projekt0n/github-nvim-theme",
+      'projekt0n/github-nvim-theme',
       disable = not config.plugins.github_theme.enabled,
       config = function() require('plugins/github_theme') end
+    }
+
+    -- Lush
+    use {
+      'rktjmp/lush.nvim',
+      disable = not config.plugins.lush.enabled,
+      config = function() require('plugins/lush') end,
     }
 
     -- Auto sessions

@@ -2,8 +2,8 @@ return {
   -- nord, nightfox, nordfox, dayfox, dawnfox, duskfox
   -- github_dark, github_dimmed, github_dark_default,
   -- github_dark_colorblind, github_light, github_light_default
-  -- github_light_colorblind
-  theme = 'github_dark',
+  -- github_light_colorblind, lush
+  theme = 'lush',
   finder = 'telescope', -- fzf, telescope
   git = 'fugutive', -- neogit, fugutive
   spotify_enabled = true,
@@ -31,6 +31,7 @@ return {
     github_theme = { enabled = true },
     indent_blankline = { enabled = false },
     nvim_notify = { enabled = true },
+    lush = { enabled = true },
     null_ls = { enabled = true },
   }
 }
