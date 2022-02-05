@@ -32,6 +32,7 @@ return require('packer').startup({
       disable = not config.plugins.auto_sessions.enabled,
       config = function() require('plugins/auto_sessions') end,
     }
+
     -- Which Key
     use {
       'folke/which-key.nvim',
@@ -76,7 +77,7 @@ return require('packer').startup({
         { 'nvim-lua/plenary.nvim' },
         { 'kyazdani42/nvim-web-devicons' },
         { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-        { 'rmagatti/session-lens' }
+        { 'rmagatti/session-lens', disable = not config.plugins.auto_sessions.enabled }
       }
     }
 
@@ -107,7 +108,7 @@ return require('packer').startup({
       requires = {
         { 'kyazdani42/nvim-web-devicons' },
         { 'KadoBOT/nvim-spotify', disable = not config.spotify_enabled },
-      }
+      },
     }
 
     -- LSP

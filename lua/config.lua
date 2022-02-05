@@ -26,7 +26,7 @@ return {
     diffview = { enabled = true },
     nvim_tree = { enabled = true },
     cmp = { enabled = true },
-    auto_sessions = { enabled = true },
+    auto_sessions = { enabled = false },
     trouble = { enabled = true },
     github_theme = { enabled = true },
     indent_blankline = { enabled = false },
