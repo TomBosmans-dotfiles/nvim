@@ -30,7 +30,7 @@ return {
     trouble = { enabled = true },
     github_theme = { enabled = true },
     indent_blankline = { enabled = false },
-    nvim_notify = { enabled = true },
+    nvim_notify = { enabled = false },
     lush = { enabled = true },
     null_ls = { enabled = true },
   }
