@@ -122,6 +122,13 @@ return require('packer').startup({
       }
     }
 
+    -- Null-ls
+    use {
+      'jose-elias-alvarez/null-ls.nvim',
+      disable = not config.plugins.null_ls.enabled,
+      config = function() require('plugins/null_ls') end,
+    }
+
     -- Gitsigns
     use {
       'lewis6991/gitsigns.nvim',

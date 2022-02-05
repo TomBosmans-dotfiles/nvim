@@ -31,5 +31,6 @@ return {
     github_theme = { enabled = true },
     indent_blankline = { enabled = false },
     nvim_notify = { enabled = true },
+    null_ls = { enabled = true },
   }
 }
