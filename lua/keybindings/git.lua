@@ -13,6 +13,7 @@ if config.plugins.fugutive.enabled then
   map('n', '<leader>gP', ':lua notify_trace("Git push origin HEAD --force-with-lease") <CR>')
   map('n', '<leader>gf', ':lua notify_trace("Git fetch") <CR>')
   map('n', '<leader>gr', ':Git rebase --interactive ', { noremap = true, silent = false })
+  map('n', '<leader>gR', ':lua notify_trace("Git reset HEAD~") <CR>')
 end
 
 if config.plugins.diffview.enabled then
