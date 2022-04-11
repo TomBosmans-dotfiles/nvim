@@ -1,3 +1,5 @@
+vim.cmd [[set timeoutlen=0]] -- show whichkey instantly
+
 require('which-key').setup({
   plugins = {
     marks = true, -- shows a list of your marks on ' and `

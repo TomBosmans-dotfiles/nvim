@@ -6,6 +6,8 @@ local filename = require('plugins/lualine/filename')
 local diff = require('plugins/lualine/diff')
 local diagnostics = require('plugins/lualine/diagnostics')
 
+local toggleterm = { sections = {}, filetypes = {'toggleterm'} }
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -42,5 +44,5 @@ require('lualine').setup {
     lualine_y = {{ Utils.tabCount }},
     lualine_z = {}
   },
-  extensions = {'fzf', 'nvim-tree'}
+  extensions = {'fzf', 'nvim-tree', toggleterm}
 }

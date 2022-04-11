@@ -198,6 +198,19 @@ return require('packer').startup({
       config = function() require('plugins/nvim_notify') end
     }
 
+    -- Toggleterm
+    use {
+      'akinsho/toggleterm.nvim' ,
+      disable = not config.plugins.toggleterm.enabled,
+      config = function() require('plugins/toggleterm') end
+    }
+
+    -- Markdown previewer
+    use {
+      'davidgranstrom/nvim-markdown-preview',
+      disable = not config.plugins.markdown_previewer.enabled,
+    }
+
     -- CMP
     use {
       'hrsh7th/nvim-cmp',

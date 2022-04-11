@@ -3,16 +3,23 @@ local lspkind = require('lspkind')
 
 cmp.setup({
   formatting = {
+    fields = { "kind", "abbr", "menu" },
     format = lspkind.cmp_format({
       with_text = false, -- do not show text alongside icons
       maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
     })
   },
+
+  documentation = {
+    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  },
+
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end,
   },
+
   mapping = {
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -26,6 +33,7 @@ cmp.setup({
     -- Set `select` to `false` to only confirm explicitly selected items.
     ['<CR>'] = cmp.mapping.confirm({ select = false }),
   },
+
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },

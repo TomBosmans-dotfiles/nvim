@@ -33,5 +33,7 @@ return {
     nvim_notify = { enabled = false },
     lush = { enabled = true },
     null_ls = { enabled = true },
+    toggleterm = { enabled = true },
+    markdown_previewer = { enabled = true },
   }
 }

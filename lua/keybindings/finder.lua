@@ -12,6 +12,10 @@ elseif config.finder == 'fzf' and config.plugins.fzf.enabled then
   map('n', '<leader>fa', ':Ag  <CR>')
 end
 
-if config.plugins.telescope.enabled then
+if config.plugins.telescope.enabled and config.plugins.auto_sessions.enabled then
   map('n', '<leader>fs', ':SearchSession <CR>')
+end
+
+if config.plugins.telescope.enabled and config.plugins.nvim_notify.enabled then
+  map('n', '<leader>fn', ':Telescope notify <CR>')
 end
