@@ -3,7 +3,7 @@ return {
   -- github_dark, github_dimmed, github_dark_default,
   -- github_dark_colorblind, github_light, github_light_default
   -- github_light_colorblind, lush
-  theme = 'lush',
+  theme = 'github_dark',
   finder = 'telescope', -- fzf, telescope
   git = 'fugutive', -- neogit, fugutive
   spotify_enabled = true,
@@ -34,6 +34,5 @@ return {
     lush = { enabled = true },
     null_ls = { enabled = true },
     toggleterm = { enabled = true },
-    markdown_previewer = { enabled = true },
   }
 }
