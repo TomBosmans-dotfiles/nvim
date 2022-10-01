@@ -11,9 +11,13 @@ end
 
 require("github-theme").setup({
   theme_style = config.theme:gsub('github_', ''),
-  function_style = "italic",
-  dark_float = false,
+  dark_float = true,
   dark_sidebar = false,
+  transparent = false,
   hide_inactive_statusline = true,
---  sidebars = {"qf", "vista_kind", "terminal", "packer"},
+
+  comment_style = "italic",
+  keyword_style = "NONE",
+  function_style = "bold",
+  variable_style = "NONE"
 })

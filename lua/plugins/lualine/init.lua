@@ -20,15 +20,7 @@ require('lualine').setup {
     lualine_a = {{ 'filetype', colored = false, icon_only = true }},
     lualine_b = {filename},
     lualine_c = {diff, diagnostics},
-    lualine_x = {'filetype'},
-    lualine_y = {'location'},
-    lualine_z = {}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {filename},
-    lualine_c = {diff, diagnostics},
-    lualine_x = {'filetype'},
+    lualine_x = {'filetype', 'encoding'},
     lualine_y = {'location'},
     lualine_z = {}
   },
@@ -46,3 +38,5 @@ require('lualine').setup {
   },
   extensions = {'fzf', 'nvim-tree', toggleterm}
 }
+
+vim.opt.laststatus = 3
